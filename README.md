@@ -1,9 +1,8 @@
+# Countdown timer
+
+***
+
 <div align="center">
-
-# 🎹 Galaxy MIDI Dataset
-
-**The Universe of Music**
-
 <p>
   <img
     src="https://asigalov61.github.io/countdown/countdown.svg"
@@ -11,7 +10,9 @@
     width="100%"
   />
 </p>
-
-*An ever-expanding universe of MIDI music.*
-
 </div>
+
+***
+
+### Project Los Angeles
+### Tegridy Code 2026
