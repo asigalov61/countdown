@@ -1,0 +1,12 @@
+{
+  "target": "2027-06-01T00:00:00-07:00",
+  "title": "Galaxy MIDI Dataset",
+  "description": "Coming June 1, 2027",
+  "units": ["months", "days", "hours", "minutes"],
+  "background": "#050816",
+  "card": "#0c1430",
+  "text": "#ffffff",
+  "muted": "#9ca9c7",
+  "accent": "#d94cff",
+  "border": "#26396d"
+}
