@@ -20,12 +20,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-24.04
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Check out repository
@@ -34,13 +30,12 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
-      - name: Generate countdown
+      - name: Generate countdown SVG
         run: python3 generate_countdown.py
 
-      - name: Verify generated site
+      - name: Verify generated SVG
         run: |
           test -f site/countdown.svg
-          test -f site/index.html
           echo "Generated files:"
           ls -lh site/
 
@@ -49,6 +44,15 @@ jobs:
         with:
           path: ./site
 
+  deploy:
+    runs-on: ubuntu-24.04
+    needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
